@@ -34,7 +34,7 @@ conky.config = {
 	--Arch Duoscreen
 	--gap_x = -1910,
 	gap_x = 10,									-- pixels between right or left border
-	gap_y = 10,									-- pixels between bottom or left border
+	gap_y = -5,									-- pixels between bottom or left border
 	minimum_height = 200,						-- minimum height of window
 	minimum_width = 350,						-- minimum height of window
 	maximum_width = 350,						-- maximum height of window
@@ -62,7 +62,7 @@ conky.config = {
 
 	extra_newline = false,						-- extra newline at the end - for asesome's wiboxes
 	format_human_readable = true,				-- KiB, MiB rather then number of bytes
-	font = 'Noto Mono:size=11:regular',  			-- font for complete conky unless in code defined
+	font = 'Noto Mono:size=10:regular',  			-- font for complete conky unless in code defined
 	max_text_width = 0,							-- 0 will make sure line does not get broken if width too smal
 	max_user_text = 16384,						-- max text in conky default 16384
 	override_utf8_locale = true,				-- force UTF8 requires xft
@@ -138,6 +138,7 @@ ${color1}${alignc}N E T W O R K    I N F O${color}
 ${color1}${hr}${color}
 ${color1}Local IP:${alignr}${color2}${addr wlp2s0}${color}
 #${color1}Public IP:${alignr}${color2}${execi 60 curl -s http://ipecho.net/plain; echo}${color}
+${color1}Public IP:${alignr}${color2}${execi 60 curl ifconfig.me; echo}${color}
 ${color1}Down:${alignr}${color2}${downspeed wlp2s0} KiB/s${color}
 ${color1}Up:${alignr}${color2}${upspeed wlp2s0} KiB/s${color}
 
