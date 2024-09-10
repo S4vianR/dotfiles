@@ -1,0 +1,151 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+@keyframes bounce {
+    0% {
+        margin-top: 0;
+    }
+    5% {
+        margin-top: -1.5px;
+    }
+    10% {
+        margin-top: -2px;
+}
+    15% {
+        margin-top: -2.5px;
+    }
+    20% {
+        margin-top: -3px;
+    }
+    25% {
+        margin-top: -3.5px;
+    }
+    30% {
+        margin-top: -4px;
+    }
+    35% {
+        margin-top: -3.5px;
+    }
+    40% {
+        margin-top: -3px;
+    }
+    45% {
+        margin-top: -2.5px;
+    }
+    50% {
+        margin-top: -2px;
+    }
+    55% {
+        margin-top: -1.5px;
+    }
+    60% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+window#waybar {
+    background-color: rgba(43, 48, 59, 0.275);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    color: #ffffff;
+}
+
+#workspaces {
+    padding: 0.8rem;
+    /* margin: 7px;
+    border-radius: 0.2rem;
+    border: 1px solid rgba(100, 114, 125, 0.5); */
+}
+
+#workspaces button {
+    border-radius: 0.5rem;
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+    transition: background 0.2s ease-in-out;
+    border: none;
+    outline: none;
+}
+
+#workspaces button.active {
+    background: #64727D;
+}
+
+#workspaces button.empty {
+    opacity: 0.4;
+}
+
+#workspaces button.urgent {
+    background: #eb4d4b;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    margin: 10px 0 10px 4px;
+    padding: 3px 10px;
+    color: #ffffff;
+    border-bottom: 2px solid #fff;
+    border-radius: 0.2rem;
+    font-weight: 600;
+}
+
+/* #clock {
+    animation-name: bounce;
+    animation-duration: 0.9s;
+    animation-delay: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+} */
+
+#window{
+    margin: 0 4px;
+}
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left>widget:first-child>#workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right>widget:last-child>#workspaces {
+    margin-right: 0;
+}
+
+#network.disconnected {
+    color: #f53c3c;
+    border-bottom: 2px solid #f53c3c;
+}
+
+#pulseaudio.muted {
+    color: #eb4d4b;
+    border-bottom: 2px solid #eb4d4b;
+}
+
+#tray>.passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+    -gtk-icon-effect: highlight;
+    border-bottom: 2px solid #eb4d4b;
+}
