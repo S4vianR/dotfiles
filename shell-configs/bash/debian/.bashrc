@@ -17,11 +17,21 @@ alias ls='lsd -l --group-dirs=first'
 alias la='lsd -la --group-dirs=first'
 
 alias grep='grep --color=auto'
+
+## Use if using plain APT
 alias update='sudo apt update && sudo apt upgrade'
 alias search='apt search'
 alias install='sudo apt install'
 alias remove='sudo apt remove'
 alias purge='sudo apt purge'
+
+## Use if using NALA
+# alias update='sudo nala upgrade'
+# alias search='nala search'
+# alias install='sudo nala install'
+# alias remove='sudo nala remove'
+# alias purge='sudo nala purge'
+
 alias cat='batcat'
 alias ip='ip -h -br -c'
 
