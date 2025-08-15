@@ -7,8 +7,15 @@
 
 
 # Aliases
-alias ls='eza -lh --color=always --icons --group-directories-first --git'
-alias la='eza -lah --color=always --icons --group-directories-first --git'
+
+## Use if using EXA (EZA)
+## alias ls='eza -lh --color=always --icons --group-directories-first --git'
+## alias la='eza -lah --color=always --icons --group-directories-first --git'
+
+## Use if using LSD
+alias ls='lsd -l --group-dirs=first'
+alias la='lsd -la --group-dirs=first'
+
 alias grep='grep --color=auto'
 alias update='sudo apt update && sudo apt upgrade'
 alias search='apt search'
