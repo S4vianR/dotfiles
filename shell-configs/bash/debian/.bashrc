@@ -42,6 +42,7 @@ PS1='\[\e[0;38;5;156m\]\u \[\e[0;1;38;5;127m\]on \[\e[0;38;5;158m\]\h \[\e[0;1;3
 
 ## Applications
 
-fastfetch
+# fastfetch
+screenfetch
 
 
