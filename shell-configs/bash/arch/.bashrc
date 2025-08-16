@@ -7,8 +7,15 @@
 
 
 # Aliases
-alias ls='exa -lh --color=always --icons --group-directories-first --git'
-alias la='exa -lah --color=always --icons --group-directories-first --git'
+
+## For EXA
+# alias ls='exa -lh --color=always --icons --group-directories-first --git'
+# alias la='exa -lah --color=always --icons --group-directories-first --git'
+
+## For LSD
+alias ls='lsd -lh --color=always --icon=always--group-directories-first --git'
+alias la='lsd -lah --color=always --icon=always --group-directories-first --git'
+
 alias grep='grep --color=auto'
 alias update='sudo pacman -Syu'
 alias search='pacman -Ss'
