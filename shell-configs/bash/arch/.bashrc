@@ -13,8 +13,8 @@
 # alias la='exa -lah --color=always --icons --group-directories-first --git'
 
 ## For LSD
-alias ls='lsd -lh --color=always --icon=always--group-directories-first --git'
-alias la='lsd -lah --color=always --icon=always --group-directories-first --git'
+alias ls='lsd -lh --color=always --icon=always --group-dirs'
+alias la='lsd -lah --color=always --icon=always --group-dirs'
 
 alias grep='grep --color=auto'
 alias update='sudo pacman -Syu'
