@@ -1,7 +1,7 @@
 
 hl.monitor({
     output   = "eDP-1",
-    mode     = "1920x1200@60",
+    mode     = "1920x1080@165",
     position = "auto",
     scale    = "1.33",
 })
@@ -9,6 +9,8 @@ hl.monitor({
 local terminal    = "kitty"
 local fileManager = "dolphin"
 local menu = "fuzzel"
+local browser = "brave"
+local screenshot = "flameshot gui"
 
 hl.on("hyprland.start", function () 
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
@@ -185,7 +187,7 @@ hl.config({
 
 hl.config({
     input = {
-	kb_layout  = "latam",
+	kb_layout  = "us",
         kb_variant = "",
         kb_model   = "",
         kb_options = "",
@@ -224,7 +226,7 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind("ALT" .. " + Q", hl.dsp.window.close())
-hl.bind("ALT".. " + SHIFT" .. " + Q", hl.dsp.exec_cmd("brave-origin"))
+hl.bind("ALT".. " + SHIFT" .. " + Q", hl.dsp.exec_cmd(browser))
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
@@ -278,11 +280,11 @@ hl.bind("XF86MonBrightnessUp",  hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+")
 hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"),                  { locked = true, repeating = true })
 
 -- Requires playerctl
-hl.bind("XF86Favorites",  hl.dsp.exec_cmd("playerctl next"),       { locked = true })
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86PickupPhone",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86NotificationCenter",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
+hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = true })
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
+hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
+hl.bind("print", hl.dsp.exec_cmd(screenshot))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
